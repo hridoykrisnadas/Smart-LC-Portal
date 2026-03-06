@@ -2,9 +2,10 @@ name: SDE Standard CI/CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main", "master" ]
+  workflow_dispatch:
 
 jobs:
   build-and-test:
@@ -25,7 +26,7 @@ jobs:
         run: mvn clean package
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: smart-lc-app
-          path: target/*.war
+          path: target/*.jar
