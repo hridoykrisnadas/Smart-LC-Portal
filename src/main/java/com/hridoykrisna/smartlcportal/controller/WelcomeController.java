@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.*;
 public class WelcomeController {
     @GetMapping({"/", ""})
     public String index() {
-        return "Hello World, Welcome to SmartLC Portal !";
+        return "Hello World, Welcome to Smart LC Portal !";
     }
 }
