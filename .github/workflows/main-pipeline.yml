@@ -30,3 +30,7 @@ jobs:
         with:
           name: smart-lc-app
           path: target/*.jar
+
+      - name: Trigger CD Deployment on Render
+        if: success()
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
