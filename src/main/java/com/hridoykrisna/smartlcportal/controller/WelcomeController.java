@@ -1,4 +1,4 @@
-package com.example.smartlcprotal.controller;
+package com.hridoykrisna.smartlcportal.controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.*;
 public class WelcomeController {
     @GetMapping({"/", ""})
     public String index() {
-        return "Hello World";
+        return "Hello World, Welcome to SmartLC Portal !";
     }
 }

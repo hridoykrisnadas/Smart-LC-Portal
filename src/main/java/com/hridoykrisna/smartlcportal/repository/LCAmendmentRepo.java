@@ -1,6 +1,6 @@
-package com.example.smartlcprotal.repository;
+package com.hridoykrisna.smartlcportal.repository;
 
-import com.example.smartlcprotal.entity.LCAmendment;
+import com.hridoykrisna.smartlcportal.entity.LCAmendment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

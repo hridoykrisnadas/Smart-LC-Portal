@@ -1,4 +1,4 @@
-package com.example.smartlcprotal.entity;
+package com.hridoykrisna.smartlcportal.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
