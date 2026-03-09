@@ -1,5 +1,6 @@
 package com.hridoykrisna.smartlcportal.controller;
 
+import com.hridoykrisna.smartlcportal.dto.LogInDTO;
 import com.hridoykrisna.smartlcportal.dto.ResponseDTO;
 import com.hridoykrisna.smartlcportal.dto.UserRegistrationDTO;
 import com.hridoykrisna.smartlcportal.entity.AppUser;
@@ -23,6 +24,14 @@ public class AuthController {
             return ResponseBuilder.getFailureError(bindingResult, "Binding Error");
         }
         return authUserService.registration(registrationDTO);
+    }
+
+    @PostMapping(URLConstrain.AuthManagement.LOGIN)
+    public ResponseDTO appUserLogin(@Valid @RequestBody LogInDTO logInDTO, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return ResponseBuilder.getFailureError(bindingResult, "Binding Error");
+        }
+        return authUserService.login(logInDTO);
     }
 
 }
