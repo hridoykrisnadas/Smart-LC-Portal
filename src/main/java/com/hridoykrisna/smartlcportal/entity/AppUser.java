@@ -24,4 +24,6 @@ public class AppUser extends BaseModel{
     @Column(nullable = false)
     private String password;
     private String role;
+    private boolean isEnable = false;
+
 }

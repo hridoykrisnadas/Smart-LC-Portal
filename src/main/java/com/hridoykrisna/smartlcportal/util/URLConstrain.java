@@ -16,5 +16,6 @@ public class URLConstrain {
         public static final String  ROOT = API + "/auth";
         public static final String  LOGIN = "/login";
         public static final String REGISTRATION = "/registration";
+        public static final String VERIFICATION = "/verification";
     }
 }

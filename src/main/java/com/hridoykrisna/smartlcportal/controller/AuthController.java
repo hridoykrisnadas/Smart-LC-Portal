@@ -34,4 +34,9 @@ public class AuthController {
         return authUserService.login(logInDTO);
     }
 
+    @GetMapping(URLConstrain.AuthManagement.VERIFICATION)
+    public ResponseDTO appUserVerification(@RequestParam("token") String token) {
+        return  authUserService.verifyEmailToken(token);
+    }
+
 }

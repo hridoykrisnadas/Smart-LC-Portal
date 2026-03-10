@@ -9,4 +9,6 @@ public interface AuthUserService {
     ResponseDTO registration(UserRegistrationDTO userRegistrationDTO);
 
     ResponseDTO login(@Valid LogInDTO logInDTO);
+
+    ResponseDTO verifyEmailToken(String token);
 }
